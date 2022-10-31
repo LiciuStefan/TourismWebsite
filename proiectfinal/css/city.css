@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap'); 
+/*cursor*/
+ * {
+    cursor: auto;
+    cursor: url(https://img.icons8.com/color-glass/35/000000/cursor.png),progress;
+  } /*cursor*/
+body {
+    margin-top: 60px;
+    background: linear-gradient(-45deg, #6d6875, #a5a58d, #b7b7a4, #fefae0);
+    background-size: 400% 400%;
+    -webkit-animation: gradient 5s ease infinite;
+            animation: gradient 5s ease infinite;
+  }
+  #button1 {
+    position: sticky;
+    
+    
+  }
+  
+  button {
+    /*position: relative; */
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+  }
+  /*button.learn-more:before{ display: none;} */
+  button::after { 
+    display: none;
+    visibility: hidden;
+  }
+  
+  
+  
+  button.learn-more {
+    width: 12rem;
+    height: auto;
+  
+  }
+  button.learn-more .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: #282936;
+    border-radius: 1.625rem;
+  }
+  button.learn-more .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+  }
+  button.learn-more .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+  }
+  button.learn-more .circle .icon.arrow::before {
+    position: absolute; 
+    content: "";
+    top: -0.25rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+  }
+  button.learn-more .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+    color: #282936;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  button:hover .circle {
+    width: 100%;
+  }
+  button:hover .circle .icon.arrow {
+    background: #fff;
+    transform: translate(1rem, 0);
+  }
+  button:hover .button-text {
+    color: #fff;
+  }
+  .dark-mode {
+    background: linear-gradient(-45deg, #002D3D, #0A1848, #004D66, #0078A3);
+    background-size: 400% 400%;
+    -webkit-animation: gradient 5s ease infinite;
+            animation: gradient 5s ease infinite;
+    color: #647C90;
+  }
+  input[type="checkbox"]
+  {
+      visibility: hidden;
+      display: none;
+  }
+  .check
+  {
+      position: relative;
+      display: block;
+      width: 40px;
+      height: 20px;
+      background: #092c3e;
+      cursor: pointer;
+      border-radius: 20px;
+      overflow: hidden;
+      transition: ease-in 0.5s;
+  }
+  input[type="checkbox"]:checked ~ .check {
+       background: #fff;
+       box-shadow: 0 0 0 0px /*#092c3e; */
+  }
+  .check::before{
+      content: ' ';
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      background: #fff;
+      width: 16px;
+      height: 16px;
+      border-radius: 100%;
+      transition: 0.5s;
+  }
+  
+  input[type="checkbox"]:checked ~ .check::before
+  {
+      transform: translateX(-50px);
+  }
+ .check::after{
+    content: ' ';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    background: #092c3e; 
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    transition: 0.5s;
+    transform: translateX(50px);
+}
+
+
+input[type="checkbox"]:checked ~ .check::after
+{
+    transform: translateX(0px);
+}
+p{
+  cursor: auto;
+  cursor: url(https://img.icons8.com/nolan/25/text-cursor.png),progress;
+} /*cursor*/
+li{cursor: auto;
+  cursor: url(https://img.icons8.com/nolan/25/text-cursor.png),progress;}
+h3{cursor: auto;
+  cursor: url(https://img.icons8.com/nolan/25/text-cursor.png),progress;}
+
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
